@@ -12,35 +12,5 @@ Comecei pela identidade, pelo cardápio e pela jornada de escolha dos produtos. 
 
 ![Cardápio](docs/cardapio.png)
 
-## Estágio e escopo
 
-Esta é uma cópia para apresentação técnica e estudo. Não inclui banco publicado, dados de clientes, acesso real da equipe ou credenciais de hospedagem. As capturas podem conter dados fictícios de teste. Nomes, marcas e imagens pertencem aos respectivos titulares e não têm autorização geral de reutilização.
-
-## Execução e documentação
-
-
-Esta pasta contém o código-fonte da versão com delivery, pedidos no salão para as mesas 01 a 10, carrinho, cupons, login da equipe e painel de pedidos.
-
-O código principal foi formatado e recebeu comentários. As regras do site foram preservadas. O HTML inicial, antes salvo em uma única linha, está legível em `app/home-markup.ts`.
-
-## Comece por aqui
-
-1. Leia [o mapa dos arquivos](docs/01-mapa-do-projeto.md).
-2. Acompanhe [o caminho de um pedido](docs/02-caminho-do-pedido.md).
-3. Rode o projeto seguindo [o guia local](docs/03-rodar-no-computador.md).
-4. Pratique com [os exercícios](docs/04-exercicios.md).
-5. Use [a lista das rotas](docs/05-rotas-e-dados.md) para localizar o comportamento do servidor.
-
-## Os arquivos que você mais vai abrir
-
-| Quero alterar... | Arquivo |
-| --- | --- |
-| Nomes, descrições e preços | `catalog.json` |
-| Títulos, textos e estrutura da página | `app/home-markup.ts` |
-| Cores e visual principal | `public/style.css` |
-| Carrinho, salão, checkout e painel visual | `public/orders.css` |
-| Comportamento do cliente | `public/app.js` |
-| Comportamento da equipe | `public/admin.js` |
-| Validação, autenticação e gravação | `lib/orders-api.ts` |
-| Estrutura do banco | `db/orders-schema.ts` e `drizzle/` |
 
