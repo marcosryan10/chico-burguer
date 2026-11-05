@@ -1,0 +1,2 @@
+CHICO_ADMIN_USER="seu.usuario"
+CHICO_ADMIN_PASSWORD_HASH="gerado_pelo_comando_npm_run_acesso_local"

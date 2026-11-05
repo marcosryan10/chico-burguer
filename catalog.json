@@ -1,0 +1,338 @@
+[
+  {
+    "id": "lanches-0",
+    "category": "Lanches",
+    "name": "Misto quente",
+    "description": "Pão, queijo e presunto",
+    "price": 1000
+  },
+  {
+    "id": "lanches-1",
+    "category": "Lanches",
+    "name": "Mistão",
+    "description": "Pão, queijo e presunto",
+    "price": 1200
+  },
+  {
+    "id": "lanches-2",
+    "category": "Lanches",
+    "name": "Mistão com bacon",
+    "description": "Pão, queijo, presunto e bacon",
+    "price": 1600
+  },
+  {
+    "id": "lanches-3",
+    "category": "Lanches",
+    "name": "Especial",
+    "description": "Pão, ovo e queijo",
+    "price": 1200
+  },
+  {
+    "id": "lanches-4",
+    "category": "Lanches",
+    "name": "Especial bacon",
+    "description": "Pão, ovo, queijo e bacon",
+    "price": 1600
+  },
+  {
+    "id": "lanches-5",
+    "category": "Lanches",
+    "name": "Tigresa",
+    "description": "Pão, ovo, queijo e presunto",
+    "price": 1500
+  },
+  {
+    "id": "lanches-6",
+    "category": "Lanches",
+    "name": "Tigresa bacon",
+    "description": "Pão, queijo, ovo, presunto e bacon",
+    "price": 1900
+  },
+  {
+    "id": "lanches-7",
+    "category": "Lanches",
+    "name": "Hamburguer",
+    "description": "Pão e bife de hambúrguer",
+    "price": 1200
+  },
+  {
+    "id": "lanches-8",
+    "category": "Lanches",
+    "name": "Hamburguer bacon",
+    "description": "Pão, bife de hambúrguer e bacon",
+    "price": 1600
+  },
+  {
+    "id": "lanches-9",
+    "category": "Lanches",
+    "name": "X-Burguer",
+    "description": "Pão, bife de hambúrguer e queijo",
+    "price": 1400
+  },
+  {
+    "id": "lanches-10",
+    "category": "Lanches",
+    "name": "Egg-Burguer",
+    "description": "Pão, bife de hambúrguer e ovo",
+    "price": 1400
+  },
+  {
+    "id": "lanches-11",
+    "category": "Lanches",
+    "name": "X-Egg Burguer",
+    "description": "Pão, bife de hambúrguer, queijo e ovo",
+    "price": 1600
+  },
+  {
+    "id": "lanches-12",
+    "category": "Lanches",
+    "name": "X-Bacon",
+    "description": "Pão, bife de hambúrguer, queijo e bacon",
+    "price": 1900
+  },
+  {
+    "id": "lanches-13",
+    "category": "Lanches",
+    "name": "Egg bacon",
+    "description": "Pão, bife de hambúrguer, ovo e bacon",
+    "price": 1900
+  },
+  {
+    "id": "lanches-14",
+    "category": "Lanches",
+    "name": "X-Egg bacon",
+    "description": "Pão, bife de hambúrguer, queijo, ovo e bacon",
+    "price": 2100
+  },
+  {
+    "id": "lanches-15",
+    "category": "Lanches",
+    "name": "X-Salada",
+    "description": "Pão, bife de hambúrguer, queijo e presunto",
+    "price": 1900
+  },
+  {
+    "id": "lanches-16",
+    "category": "Lanches",
+    "name": "X-Salada egg",
+    "description": "Pão, bife de hambúrguer, queijo, presunto e ovo",
+    "price": 2000
+  },
+  {
+    "id": "lanches-17",
+    "category": "Lanches",
+    "name": "X-Salada bacon",
+    "description": "Pão, bife de hambúrguer, bife, queijo, presunto e bacon",
+    "price": 2100
+  },
+  {
+    "id": "lanches-18",
+    "category": "Lanches",
+    "name": "X-Tudo",
+    "description": "Pão, bife de hambúrguer, queijo, presunto, ovo e bacon",
+    "price": 2200
+  },
+  {
+    "id": "lanches-19",
+    "category": "Lanches",
+    "name": "X-Filé",
+    "description": "Pão, filé mignon e queijo",
+    "price": 2500
+  },
+  {
+    "id": "lanches-20",
+    "category": "Lanches",
+    "name": "X-Filé-egg",
+    "description": "Pão, filé mignon, queijo e ovo",
+    "price": 2600
+  },
+  {
+    "id": "lanches-21",
+    "category": "Lanches",
+    "name": "X-Filé-egg/bacon",
+    "description": "Pão, filé mignon, queijo, ovo e bacon",
+    "price": 2900
+  },
+  {
+    "id": "lanches-22",
+    "category": "Lanches",
+    "name": "X-Filé tudo",
+    "description": "Pão, filé mignon, queijo, ovo, bacon e presunto",
+    "price": 3000
+  },
+  {
+    "id": "lanches-23",
+    "category": "Lanches",
+    "name": "X-Frango",
+    "description": "Pão, filé de frango e queijo",
+    "price": 2400
+  },
+  {
+    "id": "lanches-24",
+    "category": "Lanches",
+    "name": "X-Frango egg",
+    "description": "Pão, filé de frango, queijo e ovo",
+    "price": 2600
+  },
+  {
+    "id": "lanches-25",
+    "category": "Lanches",
+    "name": "X-Frango egg/bacon",
+    "description": "Pão, filé de frango, queijo, ovo e bacon",
+    "price": 2700
+  },
+  {
+    "id": "lanches-26",
+    "category": "Lanches",
+    "name": "X-Frango tudo",
+    "description": "Pão, filé de frango, queijo, presunto, ovo e bacon",
+    "price": 3000
+  },
+  {
+    "id": "lanches-27",
+    "category": "Lanches",
+    "name": "Super-Boy",
+    "description": "Pão, filé mignon, ovo e queijo",
+    "price": 2600
+  },
+  {
+    "id": "lanches-28",
+    "category": "Lanches",
+    "name": "Mega mostro",
+    "description": "Pão, filé mignon, queijo, presunto, ovo e bife de hambúrguer",
+    "price": 3300
+  },
+  {
+    "id": "lanches-29",
+    "category": "Lanches",
+    "name": "X-Picanha",
+    "description": "Pão, bife sabor picanha e queijo",
+    "price": 1900
+  },
+  {
+    "id": "lanches-30",
+    "category": "Lanches",
+    "name": "X-Picanha/bacon",
+    "description": "Pão, bife sabor picanha, queijo e bacon",
+    "price": 2700
+  },
+  {
+    "id": "lanches-31",
+    "category": "Lanches",
+    "name": "X-Picanha tudo",
+    "description": "Pão, bife sabor picanha, queijo, ovo, bacon e presunto",
+    "price": 3000
+  },
+  {
+    "id": "lanches-32",
+    "category": "Lanches",
+    "name": "Tribo de Judá",
+    "description": "Pão, filé mignon, filé de frango, bife de hambúrguer, ovo, bacon, queijo e presunto",
+    "price": 5500
+  },
+  {
+    "id": "lanches-33",
+    "category": "Lanches",
+    "name": "Black Gold Almenara",
+    "description": "Filé de lombo, bife sabor picanha, queijo, ovo, bacon, presunto e queijo cheddar",
+    "price": 3500
+  },
+  {
+    "id": "lanches-34",
+    "category": "Lanches",
+    "name": "Jhon dos Cortes",
+    "description": "Filé de frango, bife sabor picanha, ovo, queijo e presunto",
+    "price": 3000
+  },
+  {
+    "id": "lanches-35",
+    "category": "Lanches",
+    "name": "Biel BH 244",
+    "description": "Bife de hambúrguer, ovo, presunto e calabresa",
+    "price": 1900
+  },
+  {
+    "id": "omeletes-0",
+    "category": "Omeletes",
+    "name": "Omelete simples",
+    "description": "Queijo e presunto",
+    "price": 1600
+  },
+  {
+    "id": "omeletes-1",
+    "category": "Omeletes",
+    "name": "Omelete calabresa",
+    "description": "Queijo, presunto e calabresa",
+    "price": 2100
+  },
+  {
+    "id": "omeletes-2",
+    "category": "Omeletes",
+    "name": "Omelete bacon",
+    "description": "Queijo, presunto e bacon",
+    "price": 2000
+  },
+  {
+    "id": "omeletes-3",
+    "category": "Omeletes",
+    "name": "Omelete de frango",
+    "description": "Queijo, presunto e frango",
+    "price": 2300
+  },
+  {
+    "id": "omeletes-4",
+    "category": "Omeletes",
+    "name": "Omelete d’Casa do Chico",
+    "description": "Queijo, presunto, frango, calabresa e bacon",
+    "price": 2600
+  },
+  {
+    "id": "bebidas-0",
+    "category": "Bebidas",
+    "name": "Refrigerante lata",
+    "description": "Consulte os sabores disponíveis",
+    "price": 600
+  },
+  {
+    "id": "bebidas-1",
+    "category": "Bebidas",
+    "name": "Refrigerante 1 litro",
+    "description": "Consulte os sabores disponíveis",
+    "price": 1200
+  },
+  {
+    "id": "bebidas-2",
+    "category": "Bebidas",
+    "name": "Refrigerante 2 litros",
+    "description": "Consulte os sabores disponíveis",
+    "price": 1600
+  },
+  {
+    "id": "bebidas-3",
+    "category": "Bebidas",
+    "name": "Suco de polpa · 500 ml",
+    "description": "Consulte os sabores disponíveis",
+    "price": 1200
+  },
+  {
+    "id": "bebidas-4",
+    "category": "Bebidas",
+    "name": "Suco de polpa · 1 litro",
+    "description": "Consulte os sabores disponíveis",
+    "price": 1800
+  },
+  {
+    "id": "bebidas-5",
+    "category": "Bebidas",
+    "name": "Água mineral",
+    "description": "Sem gás",
+    "price": 300
+  },
+  {
+    "id": "bebidas-6",
+    "category": "Bebidas",
+    "name": "Água com gás",
+    "description": "",
+    "price": 500
+  }
+]

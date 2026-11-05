@@ -1,0 +1,28 @@
+import assert from 'node:assert/strict';
+import {randomUUID,randomBytes} from 'node:crypto';
+const base='http://127.0.0.1:4176';let cookie='';
+process.stdout.write('Ready for test credentials on stdin (hidden).\n');
+if(process.stdin.isTTY)process.stdin.setRawMode(true);let raw='';const password=await new Promise(resolve=>{process.stdin.setEncoding('utf8');process.stdin.on('data',function input(chunk){raw+=chunk;if(/[\r\n]/.test(raw)){process.stdin.off('data',input);process.stdin.pause();if(process.stdin.isTTY)process.stdin.setRawMode(false);resolve(raw.trim())}})});
+async function api(path,data,options={}){const r=await fetch(base+'/api/'+path,{method:data?'POST':'GET',headers:{Connection:'close',...(data?{'Content-Type':'application/json',Origin:options.badOrigin?'https://invalid.test':base}:{}),...(options.auth?{Cookie:cookie}:{})},body:data?JSON.stringify(data):undefined});if(r.headers.get('set-cookie'))cookie=r.headers.get('set-cookie').split(';')[0];const raw=await r.text();assert.match(r.headers.get('content-type')||'',/application\/json/,'Resposta inesperada em '+path+': '+r.status+' '+raw.slice(0,150));return {status:r.status,data:JSON.parse(raw),cookie:r.headers.get('set-cookie')}}
+assert.equal((await api('admin/orders')).status,401);
+assert.equal((await api('admin/login',{username:'chico.admin',password:'invalid'})).status,401);
+const login=await api('admin/login',{username:'chico.admin',password});assert.equal(login.status,200);assert.match(login.cookie,/HttpOnly/);assert.match(login.cookie,/SameSite=Strict/);
+assert.equal((await api('quote',{items:[{id:'invalid',quantity:1}]})).status,400);
+assert.equal((await api('quote',{items:[{id:'lanches-18',quantity:1}]},{badOrigin:true})).status,403);
+assert.equal((await api('quote',{items:[{id:'lanches-18',quantity:1}],coupon:'INVALID'})).status,400);
+assert.equal((await api('admin/coupons',{code:'TESTEAPI',kind:'percent',value:10,active:true},{auth:true})).status,200);
+const q=await api('quote',{items:[{id:'lanches-18',quantity:1,price:1}],coupon:'TESTEAPI'});assert.equal(q.status,200);assert.equal(q.data.subtotal,2200);assert.equal(q.data.delivery,500);assert.equal(q.data.discount,220);assert.equal(q.data.total,2480);
+const data={items:[{id:'lanches-18',quantity:1}],coupon:'TESTEAPI',customer:'Teste automatizado local',phone:'82999999999',address:{street:'Rua de teste',number:'123',neighborhood:'Centro',reference:'Somente teste local'},payment:'cash',changeFor:5000,notes:'Teste de integração',expectedTotal:2480,idempotencyKey:randomUUID(),receiptToken:randomBytes(32).toString('hex')};
+assert.equal((await api('orders',{...data,expectedTotal:1})).status,409);
+assert.equal((await api('orders',{...data,changeFor:1})).status,400);
+const created=await api('orders',data);assert.equal(created.status,201);assert.equal(created.data.paymentStatus,'pending');assert.equal(created.data.total,2480);
+const duplicate=await api('orders',data);assert.equal(duplicate.status,200);assert.equal(duplicate.data.id,created.data.id);
+assert.equal((await api('orders',{...data,customer:'Outra pessoa'})).status,409);
+assert.equal((await api('receipt',{id:created.data.id,token:'0'.repeat(64)})).status,404);
+assert.equal((await api('admin/update-order',{id:created.data.id,status:'preparing',paymentStatus:'confirmed'},{auth:true})).status,200);
+const receipt=await api('receipt',{id:created.data.id,token:data.receiptToken});assert.equal(receipt.data.status,'preparing');assert.equal(receipt.data.paymentStatus,'confirmed');assert.equal(receipt.data.customer,undefined);assert.equal(receipt.data.address,undefined);
+const list=await api('admin/orders',undefined,{auth:true});const order=list.data.orders.find(o=>o.id===created.data.id);assert.equal(order.address.street,'Rua de teste');assert.equal(order.total,2480);
+assert.equal((await api('admin/coupons',{code:'TESTEAPI',kind:'percent',value:10,active:false},{auth:true})).status,200);
+assert.equal((await api('quote',{items:data.items,coupon:'TESTEAPI'})).status,400);
+assert.equal((await api('admin/logout',{}, {auth:true})).status,200);assert.equal((await api('admin/orders',undefined,{auth:true})).status,401);
+console.log('PASS: autorização, login, sessão, origem, preços do servidor, cupom, entrega, troco, pedido, idempotência, endereço protegido, atualização e logout.');
