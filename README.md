@@ -44,17 +44,3 @@ O código principal foi formatado e recebeu comentários. As regras do site fora
 | Validação, autenticação e gravação | `lib/orders-api.ts` |
 | Estrutura do banco | `db/orders-schema.ts` e `drizzle/` |
 
-## Primeiro teste
-
-Você precisa de Node.js 22.13 ou superior e npm. Dentro desta pasta:
-
-```powershell
-npm ci
-npm run build
-```
-
-Depois prepare o banco local e o acesso da equipe conforme o guia. Por fim, use `npm run dev` e abra o endereço informado no terminal.
-
-As alterações feitas aqui são locais. Publicar o site é um passo separado. Os dados dos clientes, senhas reais, banco da hamburgueria e credenciais de publicação não fazem parte desta cópia.
-
-Referência do código original: revisão `e66fa76ffd845ad3c4e3402498badc896591ef93`, preparada em 04/11/2026.
